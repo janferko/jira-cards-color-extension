@@ -1,0 +1,19 @@
+{
+  "name": "Jira Cards Color",
+  "version": "0.0.1",
+  "description": "Extension for changing color of jira cards on board according to status",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/secure/RapidBoard*"
+      ],
+      "js": ["change-jira-cards-color.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "gray-circle-48.png",
+    "128": "gray-circle-128.png"
+  },
+  "manifest_version": 3
+}
