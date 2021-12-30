@@ -38,4 +38,14 @@ function changeCardsColor() {
     })
 }
 
-setTimeout(changeCardsColor, 1000);
+function recursiveCheckInCaseOfDOMElementsAreRecreated() {
+    setTimeout(() => {
+        changeCardsColor();
+        recursiveCheckInCaseOfDOMElementsAreRecreated();
+    }, 5000)
+}
+
+setTimeout(() => {
+    changeCardsColor();
+    recursiveCheckInCaseOfDOMElementsAreRecreated();
+}, 1000);
