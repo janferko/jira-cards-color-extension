@@ -1,6 +1,6 @@
 {
   "name": "Jira Cards Color",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Extension for changing color of jira cards on board according to status",
   "content_scripts": [
     {
