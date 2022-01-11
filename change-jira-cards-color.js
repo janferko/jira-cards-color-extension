@@ -19,9 +19,10 @@ function changeCardsColor() {
     const grid = Array.from(document.getElementsByClassName('ghx-columns'));
     Array.isArray(grid) && grid.map(columns => {
         const columnElements = columns.getElementsByClassName('ghx-column');
-        const firstColumnElements = columnElements.length > 0 ? Array.from(columnElements[0].children) : null;
-        Array.isArray(firstColumnElements) && firstColumnElements.map(firstColumnElement => {
-            cards = cards.filter(card => card !== firstColumnElement);
+        const firstColumnElements = columnElements.length > 0 ? columnElements[0] : null;
+        const firstColumnIssues = firstColumnElements ? firstColumnElements.getElementsByClassName('ghx-issue') : null;
+        firstColumnIssues.length > 0 && Array.from(firstColumnIssues).map(firstColumnIssue => {
+            cards = cards.filter(card => card !== firstColumnIssue);
         })
     })
 
